@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+}
+.cont{
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 20fr 60fr 20fr;
+    grid-template-rows: 20% 50% 30%;
+    grid-template-areas: 
+    "G G G"
+    "L S S"
+    "F F F"
+    ;
+}
+.header{
+    grid-area: G;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.left-sidebar{
+    grid-area: L;
+    background-color: 	blue;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.right-sidebar{
+    grid-area: S;
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.footer{
+    grid-area: F;
+    background-color: green;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text:hover{
+    color: red;
+    font-size: 28px;
+    transition: all 800ms linear;
+}
+.text{
+    color: yellow;
+    font-size: 30px;
+}
+.text:last-of-type{
+    color: purple;
+    font-size: 35px;
+}
+.text::before{
+    content: "[obszar przed tekstem] ";
+}
+.text::after{
+    content: " [obszar za tekstem]";
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:active{
+    color: red;
+    font-size: 40px;
+}
+.menu{
+    color: white;
+}
+h1::selection{
+    background-color: yellow;
+    color: blue;
+}
